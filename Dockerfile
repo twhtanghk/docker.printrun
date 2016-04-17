@@ -6,6 +6,6 @@ RUN	apt-get update && \
 	apt-get clean && \
 	cd ${HOME} && \
 	git clone https://github.com/kliment/Printrun.git && \
-	pip install argparse pyreadline pyserial wxPython numpy pyglet>=1.1 cairocffi cairosvg psutil>=2.0
+	pip install argparse pyreadline pyserial wxPython numpy pyglet cairocffi cairosvg psutil
 
 ENTRYPOINT ${HOME}/Printrun/pronterface.py
