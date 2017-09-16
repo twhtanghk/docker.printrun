@@ -1,11 +1,11 @@
-FROM debian:unstable
+FROM python
+ENV	HOME=/root
 WORKDIR ${HOME}
 RUN	apt-get update && \
-	apt-get -y install python-serial python-wxgtk3.0 python-pyglet python-pip libffi-dev slic3r git && \
+	apt-get -y install python-serial python-wxgtk3.0 python-pyglet python-numpy cython python-libxml2 python-gobject python-dbus python-psutil python-cairosvg libpython-dev git && \
 	apt-get -y autoremove && \
 	apt-get clean && \
 	cd ${HOME} && \
-	git clone https://github.com/kliment/Printrun.git && \
-	pip install argparse pyreadline pyserial wxPython numpy pyglet cairocffi cairosvg psutil
+	git clone https://github.com/kliment/Printrun.git
 
-ENTRYPOINT ${HOME}/Printrun/pronterface.py
+CMD ${HOME}/Printrun/pronterface.py
