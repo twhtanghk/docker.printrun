@@ -8,4 +8,4 @@ RUN	apt-get update && \
 	cd ${HOME} && \
 	git clone https://github.com/kliment/Printrun.git
 
-CMD ${HOME}/Printrun/pronterface.py
+CMD python2 ${HOME}/Printrun/pronterface.py
