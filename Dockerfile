@@ -8,6 +8,6 @@ RUN apt-get update \
 &&  apt-get -y autoremove \
 &&  apt-get clean \
 &&  (cd ${HOME}; git clone ${SRC}) \
-&&  (cd ${HOME}/Printrun; pip install -v -r requirements.txt)
+&&  (cd ${HOME}/Printrun; pip install -r requirements.txt)
 
 CMD python ${HOME}/Printrun/pronterface.py
