@@ -8,5 +8,5 @@ xhost +
 
 ## start container
 ```
-docker run --device /dev/ttyUSB0 -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD/src:/root/src twhtanghk/docker.printrun
+docker run --device /dev/ttyUSB0 -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v $PWD/src:/root twhtanghk/docker.printrun
 ```
